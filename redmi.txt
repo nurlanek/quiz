@@ -4,3 +4,10 @@ composer require laravel/jetstream
 php artisan jetstream:install livewire
 npm install
 npm run dev
+npm run watch
+php artisan storage:link \\ resim klasorlerinin yolunu duzenleme. Profil fotosunu sirasinda yaptim.
+
+npm install bootstrap
+
+resources/css/app.css te
+@import 'bootstrap'; eklemek gerek

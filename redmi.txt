@@ -11,3 +11,7 @@ npm install bootstrap
 
 resources/css/app.css te
 @import 'bootstrap'; eklemek gerek
+npm run dev
+
+for table refresh
+php artisan migrate:fresh

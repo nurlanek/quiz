@@ -1,0 +1,10 @@
+cereate folder Components in
+app/
+
+alt+insert ----select constructor
+
+
+create console comman laravel
+make:command
+
+test

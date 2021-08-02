@@ -13,6 +13,21 @@ resources/css/app.css te
 @import 'bootstrap'; eklemek gerek
 npm run dev
 
+
+migrate yaptigimiz zaman hata verdiyse
+Update your /app/Providers/AppServiceProvider.php to contain:
+use Illuminate\Support\Facades\Schema;
+
+/**
+ * Bootstrap any application services.
+ *
+ * @return void
+ */
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
 for table refresh
 php artisan migrate:fresh
 

@@ -13,13 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+
+Route::group(['middleware' => ['auth', 'isAdmin']], function (){
+    Route::get('/', function (){
+        return "Merhaba testi";
+    });
 });
 
 Route::middleware(['auth', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::group(['middleware' => ['auth','isAdmin'], 'prefix' => 'admin'], function () {
+
+Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], function (){
 });

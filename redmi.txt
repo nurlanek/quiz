@@ -33,3 +33,9 @@ php artisan migrate:fresh
 
 daha sonra teams calistirmak icin bu yaptim
 php artisan jetstream:install livewire --teams
+
+
+Seederleri ayri ayri cagirmak icin php artisan db:seed --class=Walmart_released_ordersSeeder
+sonra
+php artisan migrate:fresh --seed
+

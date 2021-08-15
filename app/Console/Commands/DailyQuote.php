@@ -38,9 +38,6 @@ class DailyQuote extends Command
      * @return int
      */
 
-
-
-
     public function handle()
     {
         $controller = app()->make('App\Http\Controllers\savecontroller');

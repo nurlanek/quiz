@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\http\Controllers\W_relased_orderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth', 'isAdmin']], function (){
     Route::get('/', function (){
-        return "Merhaba testi";
+        return view('welcome');
     });
 });
 
@@ -31,3 +31,5 @@ Route::middleware(['auth', 'verified'])->get('/dashboard', function () {
 
 Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], function (){
 });
+
+Route::resource('w_relased_order', W_relased_orderController::class );

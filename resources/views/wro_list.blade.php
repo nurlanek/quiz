@@ -11,9 +11,7 @@
       <th scope="col">customer Email Id</th>
       <th scope="col">customer Order Id</th>
       <th scope="col">order Date</th>
-      <th scope="col">order Lines</th>
       <th scope="col">order Type</th>
-      <th scope="col">original Customer Order ID</th>
       <th scope="col">purchase Order Id</th>
       <th scope="col">shipping Info</th>
       <th scope="col"></th>
@@ -26,9 +24,7 @@
       <td>{{$walmart->customerEmailId}}</td>
       <td>{{$walmart->customerOrderId}} </td>
       <td>{{$walmart->orderDate}} </td>
-      <td> </td>
       <td>{{$walmart->orderType}} </td>
-      <td> </td>
       <td>{{$walmart->purchaseOrderId}} </td>
       <td>{{$walmart->shippingInfo}} </td>
       <td><a href="#" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i>

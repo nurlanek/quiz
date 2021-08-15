@@ -17,6 +17,8 @@ class W_relased_orderController extends Controller
     public function index()
     {
         $w_relased_order = Walmart_released_orders::paginate(5);
+        //krsort($w_relased_order);
+        print_r($w_relased_order);
         return view('wro_list', compact('w_relased_order'));
     }
 

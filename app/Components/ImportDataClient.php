@@ -15,7 +15,7 @@ class ImportDataClient
     {
         $this->client = new Client([
             'base_url' => 'https://jsonplaceholder.typicode.com/',
-            'timeout' => 3.14,
+            'timeout' => 2.0,
             'verify' => false,
         ]);
     }

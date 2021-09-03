@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Walmart_released_orders;
+use App\Models\walmart_released_orders;
 
-class W_relased_orderController extends Controller
+class WrelasedorderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +16,9 @@ class W_relased_orderController extends Controller
      */
     public function index()
     {
-        $w_relased_order = Walmart_released_orders::paginate(5);
+        $w_relased_order = walmart_released_orders::paginate(10);
         //krsort($w_relased_order);
-        print_r($w_relased_order);
+        // print_r($w_relased_order);
         return view('wro_list', compact('w_relased_order'));
     }
 

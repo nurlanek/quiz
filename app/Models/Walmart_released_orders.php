@@ -5,19 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Walmart_released_orders extends Model
+class walmart_released_orders extends Model
 {
     use HasFactory;
-    protected $table = 'Walmart_released_orders';
+    protected $table = 'walmart_released_orders';
 
-    protected $fillable = [
-        'customerEmailId',
-        'customerOrderId',
-        'orderDate',
-        'orderLines',
-        'orderType',
-        'originalCustomerOrderID',
-        'purchaseOrderId',
-        'shippingInfo',
-    ];
+protected $fillable = [
+    'customer_email_id',
+    'customer_order_id',
+    'order_date',
+    'order_lines',
+    'order_type',
+    'original_customer_order_id',
+    'purchase_order_id',
+    'shipping_info',
+];
 }

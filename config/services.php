@@ -30,4 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'wlm' =>[
+      'clientid' => env('WLM_API_CLIENT_ID', '5a5ab9ee-58ec-4b01-821a-4220a336a968'),
+      'clientsecret' => env('WLM_API_CLIENT_SECRET', 'IriuP3RT5-oqYMi-lmpz33Hg6Xpv9rDcxGMnZ9WJ2Mhd_zpVZRmcviZcLswqTh9yfQ_IuTdlFETl_qmtDFGVNA'),
+      'tokenurl' => env('WLM_API_TOKEN_URL', 'https://sandbox.walmartapis.com/v3/token'),
+    ],
+
 ];

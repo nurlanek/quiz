@@ -18,6 +18,12 @@
                     <x-jet-nav-link href="{{ route('w_relased_order.index') }}" :active="request()->routeIs('dashboard')">
                         Walmart Orders
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="#" :active="request()->routeIs('dashboard')">
+                        Amazon Orders
+                    </x-jet-nav-link>
+                    <x-jet-nav-link href="#" :active="request()->routeIs('dashboard')">
+                        Ebay Orders
+                    </x-jet-nav-link>
                 </div>
             </div>
 

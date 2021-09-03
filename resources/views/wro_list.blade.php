@@ -27,8 +27,8 @@
       <td>{{$walmart->orderType}} </td>
       <td>{{$walmart->purchaseOrderId}} </td>
       <td>{{$walmart->shippingInfo}} </td>
-      <td><a href="#" class="btn btn-sm btn-primary"><i class="fa fa-pen"></i>
-          <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-times"></i>
+      <td><a href="#" class="btn btn-sm btn-primary">Print Lable</a>
+
           </td>
     </tr>
     @endforeach

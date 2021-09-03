@@ -13,6 +13,6 @@ class Walmart_released_ordersSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Walmart_released_orders::factory(50)->create();
+        \App\Models\walmart_released_orders::factory(50)->create();
     }
 }

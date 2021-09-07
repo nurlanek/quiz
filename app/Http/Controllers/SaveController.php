@@ -13,12 +13,8 @@ class savecontroller extends Controller
      *
      * @return void
      */
-
-
     function GetToken($clientId, $clientSecret, $tokenUrl)
     {
-
-
         $authorization = base64_encode($clientId . ":" . $clientSecret);
         $qos = uniqid();
         $ch  = curl_init();
@@ -97,11 +93,11 @@ class savecontroller extends Controller
 
     }
 
-        public function handledata()
-        {
-            $clientId = "5a5ab9ee-58ec-4b01-821a-4220a336a968";
-            $clientSecret = "IriuP3RT5-oqYMi-lmpz33Hg6Xpv9rDcxGMnZ9WJ2Mhd_zpVZRmcviZcLswqTh9yfQ_IuTdlFETl_qmtDFGVNA";
-            $tokenUrl     = "https://sandbox.walmartapis.com/v3/token";
-            $this->GetToken($clientId, $clientSecret, $tokenUrl);
-        }
+    public function handledata()
+    {
+        $clientId = "5a5ab9ee-58ec-4b01-821a-4220a336a968";
+        $clientSecret = "IriuP3RT5-oqYMi-lmpz33Hg6Xpv9rDcxGMnZ9WJ2Mhd_zpVZRmcviZcLswqTh9yfQ_IuTdlFETl_qmtDFGVNA";
+        $tokenUrl     = "https://sandbox.walmartapis.com/v3/token";
+        $this->GetToken($clientId, $clientSecret, $tokenUrl);
     }
+}

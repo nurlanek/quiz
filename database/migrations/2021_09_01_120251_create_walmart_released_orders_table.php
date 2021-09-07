@@ -21,11 +21,9 @@ class CreateWalmartReleasedOrdersTable extends Migration
                 $table->string('order_date')->default('');
                 $table->longText('order_lines')->nullable();
                 $table->string('order_type')->default('');
-                $table->string('original_customer_order_id')->default('');
+                $table->string('original_customer_order_id')->nullable();
                 $table->string('purchase_order_id')->default('');
                 $table->longText('shipping_info')->nullable();
-                $table->rememberToken();
-                $table->timestamps();
             });
         }
 

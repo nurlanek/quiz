@@ -2,18 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\Walmart_released_orders;
+use App\Models\WReleasedOrders;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class Walmart_released_ordersFactory extends Factory
+class WReleasedOrdersFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Walmart_released_orders::class;
+    protected $model = WReleasedOrders::class;
 
     /**
      * Define the model's default state.

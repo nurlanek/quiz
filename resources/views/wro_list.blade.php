@@ -18,15 +18,22 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($w_relased_order as $walmart)
+
+
+
+
+    @foreach($GetOrders as $walmart)
     <tr>
       <th scope="row">{{ $walmart->id}}</th>
-      <td>{{$walmart->customerEmailId}}</td>
-      <td>{{$walmart->customerOrderId}} </td>
-      <td>{{$walmart->orderDate}} </td>
-      <td>{{$walmart->orderType}} </td>
-      <td>{{$walmart->purchaseOrderId}} </td>
-      <td>{{$walmart->shippingInfo}} </td>
+      <td>{{$walmart->customer_email_id}}</td>
+      <td>{{$walmart->customer_order_id}}</td>
+      <td>{{$walmart->order_date}}</td>
+      <td>{{$walmart->order_type}}</td>
+      <td>{{$walmart->purchase_order_id}}</td>
+      @foreach($GetShipDetails as $inspection)
+          <?php $infraction_data = json_decode(json_encode($inspection->shipping_info),TRUE); ?>
+      <td>{{ ($infraction_data) }}</td>
+      @endforeach
       <td><a href="#" class="btn btn-sm btn-primary">Print Lable</a>
 
           </td>
@@ -34,7 +41,7 @@
     @endforeach
   </tbody>
     </table>
-    {{$w_relased_order->links()}}
+    {{$GetOrders->links()}}
         </div>
   </div>
     </div>

@@ -15,7 +15,7 @@
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-jet-nav-link>
-                    <x-jet-nav-link href="{{ route('w_relased_order.index') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link href="{{ route('WRorder.index') }}" >
                         Walmart Orders
                     </x-jet-nav-link>
                     <x-jet-nav-link href="#" :active="request()->routeIs('dashboard')">

@@ -35,12 +35,12 @@ Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], functio
 
 //Route::resource('w_relased_order', WrelasedorderController::class );
 
-Route::get('response', 'SaveController@GetData');
+////Route::get('response', 'SaveController@GetData');
 
 //Route::get('test', [App\Http\Controllers\SaveController::class, 'GetData']);
 
- Route::get('response-json', function ($response) {
-         return ['message' => $response];
-  });
-  Route::get('/test', [App\Http\Controllers\savecontroller::class, 'GetData']);
+ //Route::get('response-json', function ($response) {
+//         return ['message' => $response];
+//  });
+//  Route::get('/test', [App\Http\Controllers\savecontroller::class, 'GetData']);
   Route::resource('response', 'ResponseController');

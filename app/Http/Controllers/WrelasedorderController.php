@@ -35,6 +35,22 @@ class WRelasedOrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function detail($id)
+     {
+        $orderdetail = WReleasedOrders::where('id', $id)->first();
+        return view('detail', compact('orderdetail'));      
+     }
+
+     /**
+      * Store a newly created resource in storage.
+      *
+      * @param  \Illuminate\Http\Request  $request
+      * @return \Illuminate\Http\Response
+      */
+
+
+
     public function create()
     {
         //

@@ -16,7 +16,16 @@
         @livewireStyles
 
         <!-- Scripts -->
+
         <script src="{{ mix('js/app.js') }}" defer></script>
+        <script type="text/javascript">
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+          myInput.focus()
+        })
+        </script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -48,5 +57,6 @@
         @stack('modals')
 
         @livewireScripts
+        <script src="/js/modal.js"></script>
     </body>
 </html>

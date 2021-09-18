@@ -28,3 +28,4 @@ Route::group(['middleware' => ['auth', 'isAdmin'], 'prefix' => 'admin'], functio
 //  });
 //  Route::get('/test', [App\Http\Controllers\savecontroller::class, 'GetData']);
 Route::resource('response', 'ResponseController');
+Route::resource('api', 'APIController');

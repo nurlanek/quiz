@@ -41,16 +41,16 @@ class ResponseController extends Controller
     // dd($collection);
     foreach($collection['list']['elements'] as $key){
       for($i=0; $i<count($key); $i++){
-        $Arr['purchase_order_id']          = $key[$i]['purchaseOrderId'];
-        $Arr['customer_order_id']          = $key[$i]['customerOrderId'];
-        $Arr['customer_email_id']          = $key[$i]['customerEmailId'];
-        $Arr['order_type']                 = $key[$i]['orderType'];
-        $Arr['order_date']                 = $key[$i]['orderDate'];
-        $Arr['order_lines']                = json_encode($key[$i]['orderLines']);
-        $Arr['shipping_info']              = json_encode($key[$i]['shippingInfo']);
-        $Arr['original_customer_order_id'] = isset($key[$i]['originalCustomerOrderID'])?$key[$i]['originalCustomerOrderID']:'';
+        $Arr['purchaseOrderId']          = $key[$i]['purchaseOrderId'];
+        $Arr['customerOrderId']          = $key[$i]['customerOrderId'];
+        $Arr['customerEmailId']          = $key[$i]['customerEmailId'];
+        $Arr['orderType']                 = $key[$i]['orderType'];
+        $Arr['orderDate']                 = $key[$i]['orderDate'];
+        $Arr['orderLines']                = json_encode($key[$i]['orderLines']);
+        $Arr['shippingInfo']              = json_encode($key[$i]['shippingInfo']);
+        $Arr['originalCustomerOrderID'] = isset($key[$i]['originalCustomerOrderID'])?$key[$i]['originalCustomerOrderID']:'';
          //dd($key) ;
-        if (!WReleasedOrders::where('customer_order_id', '=', $key[$i]['customerOrderId'])->exists()) {
+        if (!WReleasedOrders::where('customerOrderId', '=', $key[$i]['customerOrderId'])->exists()) {
             WReleasedOrders::insert($Arr);
         }
       }

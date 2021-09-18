@@ -3,31 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\WReleasedOrders;
 
-class WRelasedOrderController extends Controller
+class APIController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     *
      */
-    public function index(WReleasedOrders $WRorders)
+    public function index()
     {
-        $GetOrders = $WRorders->paginate(10);
-        $order = $WRorders->select('shipping_info')->get();
-        $GetShipDetails = json_decode($order);
-        $GetShipDetails = [];
-
-        // $collection = json_encode(collect($w_relased_order),true);
-        // $returnj = json_decode($collection);
-        //krsort($w_relased_order);
-        // print_r($w_relased_order);
-        // return response($w_relased_order);
-        // dd($w_relased_order);
-        return view('wro_list', compact('GetOrders','GetShipDetails'));
+        // Get settings page
+        return view('api.main');
     }
 
     /**
@@ -35,24 +22,6 @@ class WRelasedOrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-
-     public function detail($id)
-     {
-        $orderdetail = WReleasedOrders::where('id', $id)->first();
-        // dd($orderdetail);
-        return $orderdetail;
-        return view('detail', compact('orderdetail'));
-     }
-
-     /**
-      * Store a newly created resource in storage.
-      *
-      * @param  \Illuminate\Http\Request  $request
-      * @return \Illuminate\Http\Response
-      */
-
-
-
     public function create()
     {
         //
